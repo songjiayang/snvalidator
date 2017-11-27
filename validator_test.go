@@ -10,7 +10,12 @@ func TestIsValidSN(t *testing.T) {
 	assertion := assert.New(t)
 
 	validSN := "513826199104253418"
-	ok, err := IsValidSN(validSN)
+	isValid, err := IsValidSN(validSN)
 	assertion.Nil(err)
-	assertion.True(ok)
+	assertion.True(isValid)
+
+	invalidSN := "513826199104253417"
+	isValid, err = IsValidSN(invalidSN)
+	assertion.Nil(err)
+	assertion.False(isValid)
 }
