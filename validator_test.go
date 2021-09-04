@@ -3,7 +3,7 @@ package validator
 import (
 	"testing"
 
-	"github.com/golib/assert"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestIsValidSN(t *testing.T) {

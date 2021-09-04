@@ -1,6 +1,8 @@
 package validator
 
-import "strconv"
+import (
+	"strconv"
+)
 
 // detail to check https://zh.wikipedia.org/wiki/中华人民共和国公民身份号码
 
@@ -52,7 +54,7 @@ func IsValidSN(sn string) (ok bool, err error) {
 		checkCode = strconv.Itoa(cCode)
 	}
 
-	ok = (checkCode == string(sn[17]))
+	ok = checkCode == string(sn[17])
 
 	return ok, nil
 }
