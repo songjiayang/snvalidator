@@ -1,5 +1,5 @@
 # snvalidator
-A validator for Chinese id card number.
+A validator of Chinese ID card number.
 
 ### Usage
 
@@ -8,7 +8,7 @@ import "github.com/songjiayang/snvalidator"
 
 func main(){
   sn := "513826199104253418"
-  valid, _ := validator.IsValidSN(sn) // valid should be true
+  isValid, _ := snvalidator.IsValidSN(sn) // isValid should be true
 }
 ```
 
